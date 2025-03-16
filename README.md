@@ -16,7 +16,6 @@ React: Library for building the user interface. Axios: For making HTTP calls to 
 
 JSON: Data format for communication between frontend and backend. CORS (Cross-Origin Resource Sharing): Configuration in the backend to allow frontend requests. Project Structure:
 
-Backend (Spring Boot):
 
 Model: Task class with attributes: id, title, description, completed. Repository: TaskRepository interface extending JpaRepository for database operations. Service: TaskService class to implement business logic (create, read, update, delete tasks). Controller: TaskController class with REST endpoints: GET /tasks: List all tasks. POST /tasks: Create a new task. PUT /tasks/{id}: Update an existing task. DELETE /tasks/{id}: Delete a task. CORS Configuration: Allow requests from the frontend (React). Frontend (React):
 
