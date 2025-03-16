@@ -32,3 +32,14 @@ build/
 ### VS Code ###
 .vscode/
 src/main/resources/application.properties
+echo ".mvn/" >> .gitignore
+
+# Ignorar arquivos do macOS
+.DS_Store
+
+# Ignorar pastas do Maven
+.mvn/
+target/
+
+# Ignorar node_modules (frontend)
+node_modules/
