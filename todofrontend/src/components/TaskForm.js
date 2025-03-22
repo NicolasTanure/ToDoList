@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createTask } from '../services/api';
+import '../styles/TaskForm.css'; // Importe o CSS
 
 const TaskForm = ({ fetchTasks }) => {
   const [title, setTitle] = useState('');
@@ -7,14 +8,14 @@ const TaskForm = ({ fetchTasks }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await createTask({ title, description, completed: false });
+    await createTask({ titulo: title, descricao: description, completed: false }); 
     setTitle('');
     setDescription('');
     fetchTasks(); // Atualiza a lista após adicionar
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="task-form">
       <div className="mb-3">
         <label htmlFor="title" className="form-label">Título</label>
         <input
